@@ -41,6 +41,7 @@ run_unit_tests:
     - echo "runing test...."
   after_script:
     - echo "cleaning the data test"
+...
 ```
 
 <u>STAGES:<u/>
@@ -52,6 +53,7 @@ stages:
   - test
   - build
   - deploy 
+...
 ```
 
 <u>JOB DEPENDENCIES ("needs"):<u/>
@@ -66,6 +68,7 @@ push_image:
   stage: build
   needs: # it needs build_image jobs to run before push image runs
     - build_image 
+...
 ```
 
 EMBEND SCRIPT:
@@ -79,6 +82,7 @@ run_unit_tests:
     - echo "Preparing the test data"
     - chmod +x ./prepare-test.sh # CAUTIONS!!! need to change the permission of the script first 
     - ./prepare-test.sh # this is where we run the code 
+...
 ```
 
 JOBS CONTROL ON SPECIFIC BRANCH
@@ -105,6 +109,7 @@ build_image:
       - main
   script:
     - ...
+...
 ```
 
 WORKFLOW RULES
@@ -128,6 +133,18 @@ workflow:
     - if: $CI_COMMIT_BRANCH != "main"
       when: never
     - when: always
+.... 
+```
 
+PULL REQUEST
+In this case we want to make sure to test the code on pull request event. Hence we will use "rules" jobs to trigered the jobs only run when its in the main and also if there are pull request event.
+
+```
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH != "main" &&  $CI_PIPELINE_SOURCE !="merge_request_event"
+      when: never
+    - when: always
+...
 ```
 

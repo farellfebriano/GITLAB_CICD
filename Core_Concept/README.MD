@@ -16,3 +16,11 @@ Software versioning technique:
   <li>Minor change</li>
   <li>patch</li>
 </ul>
+
+## Continous Deployement
+![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/Core_Concept/Image/continous_dployement.png?raw=true)
+
+NOTE:
+<br/>
+It is important that we do code analysis test, line test to make sure that the code are clean and also maintainable to be passed to the next developer. 
+

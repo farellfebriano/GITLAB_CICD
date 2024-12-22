@@ -28,7 +28,12 @@ jobs:
 <br/>
 jobs are the discrete tasks or steps that are executed within a pipeline. It define a specific job like (building an application, Running test suites, linting code, packaging artifacts, deploying to a server).
 
-commands
+commands:
 <br/>
 refers to the command or instruction that are executed as part of each job in the pipeline.
+
+stages:
+<br/>
+refers to phase or steps in the pipline and control the flow of task(jobs). each stage is logical grouping of jobs that execute similar tasks, such as building, testing, and deploying. 
+
 

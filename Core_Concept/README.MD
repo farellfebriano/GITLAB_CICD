@@ -56,7 +56,7 @@ stages:
 
 <u>JOB DEPENDENCIES ("needs"):<u/>
 <br/>
-In certain situation, you want to run a certain job before other job (job's dependenciest). Hence "using command needs are require for doing so. In the example bellow, build image is required to run before the push image.
+In certain situation, you want to run a certain job before other job (job's dependenciest). Hence, using command "needs" are require for doing so. In the example bellow, build image is required to run before the push image.
 
 ```yaml
 build_image:

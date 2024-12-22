@@ -68,5 +68,18 @@ push_image:
     - build_image 
 ```
 
+EMBEND SCRIPT:
+<br/>
+In case that your script has multiple line, we sugest that you embend the script to make the pipline more readable. 
+
+```yaml
+run_unit_tests:
+  stage: test
+  script: # will run before the test data
+    - echo "Preparing the test data"
+    - chmod +x ./prepare-test.sh # CAUTIONS!!! need to change the permission of the script first 
+    - ./prepare-test.sh
+```
+
 
 

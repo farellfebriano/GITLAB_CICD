@@ -32,6 +32,16 @@ COMMANDS:
 <br/>
 Refers to the command or instruction that are executed as part of each job in the pipeline. Bellow are example of 3 building blocks of command. before_script, script, after_script.
 
+```yaml
+run_unit_tests:
+  stage: test
+  before_script: # will run before the test data
+    - echo "Preparing the test data"
+  script:
+    - echo "runing test...."
+  after_script:
+    - echo "cleaning the data test"
+```
 
 STAGES:
 <br/>

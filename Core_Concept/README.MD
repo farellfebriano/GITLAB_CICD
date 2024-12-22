@@ -137,6 +137,7 @@ workflow:
 ```
 
 PULL REQUEST
+<br/>
 In this case we want to make sure to test the code on pull request event. Hence we will use "rules" jobs to trigered the jobs only run when its in the main and also if there are pull request event.
 
 ```

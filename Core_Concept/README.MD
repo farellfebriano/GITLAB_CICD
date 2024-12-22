@@ -36,4 +36,20 @@ stages:
 <br/>
 refers to phase or steps in the pipline and control the flow of task(jobs). each stage is logical grouping of jobs that execute similar tasks, such as building, testing, and deploying. 
 
+dependenciest between jobs under the same stage ("needs"):
+<br/>
+in certain situation, you want to run a certain job before other job (job's dependenciest). Hence "using command needs are require for doing so. In the example bellow, build image is required to run before the push image.
+
+```yaml
+
+build_image:
+  stage: build
+
+push_image:
+  stage: build
+  needs: # it needs build_image jobs to run before push image runs
+    - build_image 
+```
+
+
 

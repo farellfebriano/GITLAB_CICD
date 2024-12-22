@@ -1,0 +1,13 @@
+run_test:
+  script:
+    - echo "running the test"
+
+build_image:
+  script:
+    - echo "building the docker image"
+    - echo "tagging the docker image"
+
+  push_image:
+    script:
+      - echo "logging into docker registry"
+      - echo "pushing docker image to registry"

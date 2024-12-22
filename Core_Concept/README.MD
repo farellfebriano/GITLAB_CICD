@@ -1,16 +1,19 @@
 # GIT LAB Core Concept
 
-
 ## CICD in high level
+
 ![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/Core_Concept/Image/CICD_in_highlevel.png?raw=true)
 
 ### CI and CD
+
 ![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/Core_Concept/Image/CI_and_CD.png?raw=true)
 
-## Software Version-ing Technique 
+## Software Version-ing Technique
+
 ![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/Core_Concept/Image/software_versioning.png?raw=true)
 
 Software versioning technique:
+
 <ul>
   <li>Major change</li>
   <li>Minor change</li>
@@ -18,7 +21,7 @@ Software versioning technique:
 </ul>
 
 ## Continous Deployement
+
 ![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/Core_Concept/Image/continous_dployement.png?raw=true)
 <br/>
-It is important that we do code analysis test, line test to make sure that the code are clean and also maintainable to be passed to the next developer. 
-
+It is important that we do code analysis test, line test to make sure that the code are clean and also maintainable to be passed to the next developer.

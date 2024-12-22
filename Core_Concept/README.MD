@@ -24,6 +24,11 @@ It is important that we do code analysis test, line test to make sure that the c
 
 ## Building Blocks of Pipeline
 
-jobs : jobs are the discrete tasks or steps that are executed within a pipeline. It define a specific job like (building an application, Running test suites, linting code, packaging artifacts, deploying to a server)
+jobs: 
+<br/>
+jobs are the discrete tasks or steps that are executed within a pipeline. It define a specific job like (building an application, Running test suites, linting code, packaging artifacts, deploying to a server).
 
+commands
+<br/>
+refers to the command or instruction that are executed as part of each job in the pipeline.
 

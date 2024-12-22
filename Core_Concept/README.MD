@@ -11,6 +11,8 @@
 ![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/Core_Concept/Image/software_versioning.png?raw=true)
 
 Software versioning technique:
-•	Major changes
-•	Minor changes
-•	patch
+<ul>
+  <li>Major change</li>
+  <li>Minor change</li>
+  <li>patch</li>
+</ul>

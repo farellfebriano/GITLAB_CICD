@@ -107,4 +107,23 @@ build_image:
     - ...
 ```
 
+WORKFLOW RULES
+<br/>
+In certain case we want to create conditional statement on all the jobs in one file. Hence we use "rules" command. This is used when we want to add conditional situation to run jobs in a global socpe, not in individual jobs. 
+<br/>
+gitlab variable: 
+<br/>
+https://docs.gitlab.com/ee/ci/variables/predefined_variables.html
+<br/>
+
+```
+# in this example, if is not in the main brach dont excude all the code
+# $CI_COMMIT_BRANCH is variable that gitlab provide. 
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH != "main"
+      when: never
+    - when: always
+
+```
 

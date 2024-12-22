@@ -78,8 +78,33 @@ run_unit_tests:
   script: # will run before the test data
     - echo "Preparing the test data"
     - chmod +x ./prepare-test.sh # CAUTIONS!!! need to change the permission of the script first 
-    - ./prepare-test.sh
+    - ./prepare-test.sh # this is where we run the code 
 ```
 
+JOBS CONTROL ON SPECIFIC BRANCH
+<br/>
+There are some cases that we dont want some jobs to run. For, example when we createa branch and we commit the code, we dont want the build_image and push_image to run since the code needs more modification. Hence we only wants the test jobs that is running since we might still create changes to the code. Hence we can use "only" or "execpt" command. 
+<br/>
+
+only: we specifiying if the jobs runs "ONLY"  on a or multiple branch
+except: we specifiying if the jobs runs "EXCEPT" on a or multiple branch
+
+```yaml
+# in this example we wan to run run_lint_tests jobs on all branches "EXCEPT" main 
+# and run build_image jobs only on main branch
+run_lint_tests:
+  stage: test
+  except:
+    - main
+  script:
+    - ...
+
+build_image:
+  stage: build
+  only:
+      - main
+  script:
+    - ...
+```
 
 

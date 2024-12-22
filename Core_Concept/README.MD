@@ -24,24 +24,31 @@ It is important that we do code analysis test, line test to make sure that the c
 
 ## Building Blocks of Pipeline
 
-jobs: 
+JOBS: 
 <br/>
-jobs are the discrete tasks or steps that are executed within a pipeline. It define a specific job like (building an application, Running test suites, linting code, packaging artifacts, deploying to a server).
+Jobs are the discrete tasks or steps that are executed within a pipeline. It define a specific job like (building an application, Running test suites, linting code, packaging artifacts, deploying to a server).
 
-commands:
+COMMANDS:
 <br/>
-refers to the command or instruction that are executed as part of each job in the pipeline.
+Refers to the command or instruction that are executed as part of each job in the pipeline. Bellow are example of 3 building blocks of command. before_script, script, after_script.
 
-stages:
-<br/>
-refers to phase or steps in the pipline and control the flow of task(jobs). each stage is logical grouping of jobs that execute similar tasks, such as building, testing, and deploying. 
 
-dependenciest between jobs under the same stage ("needs"):
+STAGES:
 <br/>
-in certain situation, you want to run a certain job before other job (job's dependenciest). Hence "using command needs are require for doing so. In the example bellow, build image is required to run before the push image.
+Refers to phase or steps in the pipline and control the flow of task(jobs). each stage is logical grouping of jobs that execute similar tasks, such as building, testing, and deploying. Bellow we differ jobs between test, build, and deploy
 
 ```yaml
+stages:
+  - test
+  - build
+  - deploy 
+```
 
+JOB DEPENDENCIES ("needs"):
+<br/>
+In certain situation, you want to run a certain job before other job (job's dependenciest). Hence "using command needs are require for doing so. In the example bellow, build image is required to run before the push image.
+
+```yaml
 build_image:
   stage: build
 

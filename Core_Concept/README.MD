@@ -86,8 +86,8 @@ JOBS CONTROL ON SPECIFIC BRANCH
 There are some cases that we dont want some jobs to run. For, example when we createa branch and we commit the code, we dont want the build_image and push_image to run since the code needs more modification. Hence we only wants the test jobs that is running since we might still create changes to the code. Hence we can use "only" or "execpt" command. 
 <br/>
 
-only: we specifiying if the jobs runs "ONLY"  on a or multiple branch<br/>
-except: we specifiying if the jobs runs "EXCEPT" on a or multiple branch
+"only"    : we specifiying if the jobs runs "ONLY"  on a or multiple branch<br/>
+"except"  : we specifiying if the jobs runs "EXCEPT" on a or multiple branch
 
 ```yaml
 # in this example we wan to run run_lint_tests jobs on all branches "EXCEPT" main 

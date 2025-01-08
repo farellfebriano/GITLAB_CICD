@@ -22,21 +22,15 @@ types of executor:
 3.) Excutor clones source or downloads artifacts from gitlab instance and executes the job <br/>
 4.) Executor returns job output and status to the Runner <br/>
 5.) Runner updates job outoyt and status to Gitlab instance <br/>
+
+
 ## Continous Deployement
 
 ![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/Core_Concept/Image/continous_dployement.png?raw=true)
 <br/>
 It is important that we do code analysis test, line test to make sure that the code are clean and also maintainable to be passed to the next developer.
 
-## Building Blocks of Pipeline
-
-<span style="text-decoration: underline;"><u>JOBS:<u/></span>
-<br/>
-Jobs are the discrete tasks or steps that are executed within a pipeline. It define a specific job like (building an application, Running test suites, linting code, packaging artifacts, deploying to a server).
-
-<u>COMMANDS:<u/>
-<br/>
-Refers to the command or instruction that are executed as part of each job in the pipeline. Bellow are example of 3 building blocks of command. before_script, script, after_script.
+## Docker Executor
 
 ```yaml
 run_unit_tests:

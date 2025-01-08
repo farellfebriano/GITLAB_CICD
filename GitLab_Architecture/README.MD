@@ -1,12 +1,14 @@
 # GIT LAB ARCHITECTURE
 
 ## What is a runners.
+
 Program that is install on a machine, that seperate from the one that hosts the gitlab instance. So basically a runner is a mediator that will fetch the job from the gitlab server and hand over the commands of the job to the shell of the server that it's running on.
 
-
 ## What is an executor
+
 An executor refers to the component or environment responsible for running the jobs, tasks, or pipelines defined in the CI/CD process. <br/>
 types of executor:
+
 <ul>
   <li>shell</li>
   <li>docker</li>
@@ -22,6 +24,7 @@ types of executor:
 3.) Excutor clones source or downloads artifacts from gitlab instance and executes the job <br/>
 4.) Executor returns job output and status to the Runner <br/>
 5.) Runner updates job outoyt and status to Gitlab instance <br/>
+
 ## Continous Deployement
 
 ![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/Core_Concept/Image/continous_dployement.png?raw=true)

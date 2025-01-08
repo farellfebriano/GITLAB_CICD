@@ -1,8 +1,8 @@
-# GIT LAB Core Concept
+# GIT LAB ARCHITECTURE
 
-## CICD in high level
+## What is a runners.
+program that is install on a machine, that seperate from the one that hosts the gitlab instance.
 
-![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/Core_Concept/Image/CICD_in_highlevel.png?raw=true)
 
 ### CI and CD
 

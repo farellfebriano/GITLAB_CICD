@@ -34,8 +34,6 @@ The code bellow will specified what image that will use for entire jobs.
 image: node:17-alpine
 ...
 ```
-
-
 To specify what image to use each job. simply use `image` in the job level.
 ```yaml
 run_unit_tests:
@@ -45,7 +43,7 @@ run_unit_tests:
     - echo "runing test...."
 ...
 ```
-
+In condition where a runner dosent have a docker, the image will simply be ignored and will run under shell executor.
 
 ## Building Blocks of Pipeline
 

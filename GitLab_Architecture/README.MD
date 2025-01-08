@@ -4,7 +4,7 @@
 Program that is install on a machine, that seperate from the one that hosts the gitlab instance. So basically a runner is a mediator that will fetch the job from the gitlab server and hand over the commands of the job to the shell of the server that it's running on.
 
 
-### What is a executor
+### What is an executor
 An executor refers to the component or environment responsible for running the jobs, tasks, or pipelines defined in the CI/CD process. <br/>
 types of executor:
 <ul>
@@ -13,7 +13,7 @@ types of executor:
   <li>Virtual Machine</li>
 </ul>
 
-## Software Version-ing Technique
+### Job execution flow
 
 ![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/Core_Concept/Image/software_versioning.png?raw=true)
 

@@ -35,7 +35,7 @@ image: node:17-alpine
 ...
 ```
 
-<br/>
+
 To specify what image to use each job. simply use `image` in the job level.
 ```yaml
 run_unit_tests:
@@ -45,6 +45,7 @@ run_unit_tests:
     - echo "runing test...."
 ...
 ```
+
 
 ## Building Blocks of Pipeline
 

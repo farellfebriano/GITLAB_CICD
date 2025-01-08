@@ -15,7 +15,7 @@ types of executor:
 
 ### Job execution flow
 
-![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/Core_Concept/Image/software_versioning.png?raw=true)
+![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/GitLab_Architecture/Image/gitlab_execution_flow.png?raw=true)
 
 Software versioning technique:
 

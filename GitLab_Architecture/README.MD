@@ -29,9 +29,18 @@ types of executor:
 
 With using a docker execution each jobs will use fresh docker container. Bellow are the example on how to specify image to execute the command. <br/>
 
-the code bellow will specified what image that will use for entire jobs.
+The code bellow will specified what image that will use for entire jobs.
 ```yaml
 image: node:17-alpine
+...
+<br/>
+To specify what image to use each job. simply use `image` in the job level.
+```yaml
+run_unit_tests:
+  image: node:17-alpine
+  stage: test
+  script:
+    - echo "runing test...."
 ...
 ```
 

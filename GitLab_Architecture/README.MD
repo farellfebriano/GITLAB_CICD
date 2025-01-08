@@ -1,7 +1,7 @@
 # GIT LAB ARCHITECTURE
 
 ## What is a runners.
-program that is install on a machine, that seperate from the one that hosts the gitlab instance.
+program that is install on a machine, that seperate from the one that hosts the gitlab instance. So basically a runner is a mediator that will fetch the job from the gitlab server and hand over the commands of the job to the shell of the server that it's running on.
 
 
 ### CI and CD

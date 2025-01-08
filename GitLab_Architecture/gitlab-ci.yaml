@@ -1,0 +1,95 @@
+# specifiying a executor
+# in this situation all jobs will be executed by alpine:3.15.1
+#image: alpine:3.15.1
+
+workflow:
+  rules:
+    # if keyword that telling if it is not in the main branch don't execute this file.
+    # it also makesure that the pipeline is not trigered by the merge request even.
+    - if: $CI_COMMIT_BRANCH != "main" && $CI_PIPELINE_SOURCE != "merge_request_event"
+      when: "never"
+      # it saying that if it is in the branch then excute the branch
+    - when: always
+
+# these are the stages which show order of jobs that needs to be execute
+stages:
+  - test
+  - build
+  - deploy
+
+# jobs
+run_unit_test:
+  # specifiying the executor in the job level, hence it only specified executor in specific job
+  #image: node:17-alpine3.14
+  # execute the runner in the aws remote runner
+  tags:
+    - ec2
+    - aws
+    - remote
+  #the order that this block of code should be executed
+  stage: test
+  # atribute or keyword that will run before the script run
+  before_script:
+    - echo "preparing test data..."
+    - cat /etc/os-release
+  # atribute that let the job run a script
+  script:
+    - echo "Running a test..."
+  # atribute or keyword that will run after the script run
+  after_script:
+    - echo "cleaning up temporary files..."
+
+run_lint_test:
+  #image: node:17-alpine3.14
+  tags:
+    - ec2
+    - aws
+    - remote
+  stage: test
+  before_script:
+    - echo "preparing test data..."
+  script:
+    - echo "Running a test..."
+  after_script:
+    - echo "cleaning up temporary files..."
+
+build_image:
+  tags:
+    - ec2
+    - aws
+    - remote
+  stage: build
+  # keywords that makes the job will only execute when it is in main branch
+  only:
+    - main
+  script:
+    - echo "building the docker image..."
+    - echo "tagging the docker image"
+
+push_image:
+  tags:
+    - ec2
+    - aws
+    - remote
+  stage: build
+
+  only:
+    - main
+  # keyword that will make this specific job only run if the build_image jobs in run and succesfull
+  needs:
+    - build_image
+  script:
+    - echo "loging into docker registery"
+    - echo "pushing docker image to registery"
+
+deploy_image:
+  tags:
+    - ec2
+    - aws
+    - remote
+  only:
+    - main
+  stage: deploy
+  script:
+    - echo "loging into docker registery"
+    - echo "pushing docker image to registery"

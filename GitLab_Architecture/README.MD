@@ -33,6 +33,7 @@ The code bellow will specified what image that will use for entire jobs.
 ```yaml
 image: node:17-alpine
 ...
+```
 
 <br/>
 To specify what image to use each job. simply use `image` in the job level.

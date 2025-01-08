@@ -5,7 +5,7 @@ Program that is install on a machine, that seperate from the one that hosts the 
 
 
 ### What is a executor
-An executor refers to the component or environment responsible for running the jobs, tasks, or pipelines defined in the CI/CD process.
+An executor refers to the component or environment responsible for running the jobs, tasks, or pipelines defined in the CI/CD process. <br/>
 types of executor:
 <ul>
   <li>shell</li>

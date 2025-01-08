@@ -11,6 +11,7 @@ stages:
   - deploy
 
 run_unit_tests:
+  image: node:17-alpine
   stage: test
   before_script: # will run before the test data
     - eco $CI_PIPELINE_SOURCE

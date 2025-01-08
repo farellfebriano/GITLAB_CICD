@@ -17,14 +17,11 @@ types of executor:
 
 ![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/GitLab_Architecture/Image/gitlab_execution_flow.png?raw=true)
 
-Software versioning technique:
-
-<ul>
-  <li>Major change</li>
-  <li>Minor change</li>
-  <li>patch</li>
-</ul>
-
+1.) Runner request new jobs from GITLAB instance <br/>
+2.) Rnner complies and sends the job's payload to executor <br/>
+3.) Excutor clones source or downloads artifacts from gitlab instance and executes the job <br/>
+4.) Executor returns job output and status to the Runner <br/>
+5.) Runner updates job outoyt and status to Gitlab instance <br/>
 ## Continous Deployement
 
 ![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/Core_Concept/Image/continous_dployement.png?raw=true)

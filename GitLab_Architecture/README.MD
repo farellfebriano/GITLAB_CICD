@@ -48,3 +48,12 @@ In condition where a runner dosent have a docker, the image will simply be ignor
 ## Specific Runner: Runner for specific project
 
 ![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/GitLab_Architecture/Image/runner_or_specific_project.png?raw=true?raw=true)
+
+with registering a runner in a specific server. It actually create a connection between the server and gitlab instance
+
+## Install and configure runner on macOS
+first you need to install brew. You follow on how to install brew with following its documentation. <br/>
+resource : https://brew.sh
+
+
+

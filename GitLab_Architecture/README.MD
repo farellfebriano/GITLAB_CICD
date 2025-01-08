@@ -55,5 +55,16 @@ with registering a runner in a specific server. It actually create a connection 
 first you need to install brew. You follow on how to install brew with following its documentation. <br/>
 resource : https://brew.sh
 
-
+install gitlab runner:
+```bash
+brew install gitlab-runner
+```
+make the runner to run on the backgroud:
+```bash
+brew services start gitlab-runner
+```
+in case you want to stop and no longer to use the gitlab runner:
+```bash
+brew services stop gitlab-runner
+```
 

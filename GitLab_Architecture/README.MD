@@ -25,11 +25,15 @@ types of executor:
 4.) Executor returns job output and status to the Runner <br/>
 5.) Runner updates job outoyt and status to Gitlab instance <br/>
 
-## Continous Deployement
+## Docker Execution
 
-![CICD_in_highlevel](https://github.com/farellfebriano/GITLAB_CICD/blob/main/Core_Concept/Image/continous_dployement.png?raw=true)
-<br/>
-It is important that we do code analysis test, line test to make sure that the code are clean and also maintainable to be passed to the next developer.
+With using a docker execution each jobs will use fresh docker container. Bellow are the example on how to specify image to execute the command. <br/>
+
+the code bellow will specified what image that will use for entire jobs.
+```yaml
+image: node:17-alpine
+...
+```
 
 ## Building Blocks of Pipeline
 
